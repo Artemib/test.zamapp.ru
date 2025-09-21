@@ -31,6 +31,8 @@ use MoonShine\UI\Components\{Breadcrumbs,
     Layout\Wrapper,
     When};
 use MoonShine\MenuManager\MenuItem;
+use App\MoonShine\Resources\OrderResource;
+use App\MoonShine\Resources\CallResource;
 
 final class MoonShineLayout extends AppLayout
 {
@@ -45,6 +47,8 @@ final class MoonShineLayout extends AppLayout
     {
         return [
             ...parent::menu(),
+            MenuItem::make('Заказы', OrderResource::class),
+            MenuItem::make('Звонки', CallResource::class),
         ];
     }
 
